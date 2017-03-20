@@ -1,0 +1,20 @@
+{
+    "name": "Amazon Subscription Totals",
+    "description": "Show subscription totals for the current month",
+    "version": "0.1",
+    "permissions": [
+    "tabs","<all_urls>"
+    ],
+
+    "content_scripts": [
+      {
+        "matches": [
+            "https://www.amazon.com/gp/subscribe-and-save/manager/viewsubscriptions/*"
+            ],
+        "css": ["style.css"],
+        "js": ["jquery.js", "waituntil.js", "subscription_total.js" ],
+        "run_at": "document_end"
+      }
+    ],
+    "manifest_version":2
+}
